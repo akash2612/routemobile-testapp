@@ -1,0 +1,36 @@
+.lyt-login {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: $clr-white;
+    .login-wrap {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 2.5rem;
+        width: 30%;
+        .bs-form {
+            width: 100%;
+            .form-control {
+                width: 100%;
+            }
+        }
+        .error-wrap {
+            position: absolute;
+            top: -2.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            p {
+                font-size: 1.6rem;
+                line-height: 2rem;
+                color: $clr-error;
+                font-weight: $font-light;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}

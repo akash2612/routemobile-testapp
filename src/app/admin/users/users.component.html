@@ -1,0 +1,32 @@
+<div class="lyt-main">
+    <ul class="card-list">
+        <li class="item" *ngFor="let item of userList">
+            <div class="bs-card">
+                <div class="img-wrap">
+                    <img src="{{item['avatar']}}" alt="profile-pic">
+                </div>
+                <div class="cont-wrap">
+                    <div class="mod-label-value">
+                        <span class="label">First Name</span>
+                        <span class="value">{{item['first_name']}}</span>
+                    </div>
+                    <div class="mod-label-value">
+                        <span class="label">Last Name</span>
+                        <span class="value">{{item['last_name']}}</span>
+                    </div>
+                    <div class="mod-label-value">
+                        <span class="label">Email</span>
+                        <span class="value">{{item['email']}}</span>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div class="pagination-wrap">
+        <ul class="pagination-list">
+            <li class="pagination-item" *ngFor="let item of pageArray">
+                <a [routerLink]="['/users']" [ngClass]="{'active': (currPage) == item}" [queryParams]="{page:item}" class="link">{{item}}</a>
+            </li>
+        </ul>
+    </div>
+</div>

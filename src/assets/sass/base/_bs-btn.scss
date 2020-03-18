@@ -1,0 +1,49 @@
+.btn {
+    padding: 11px 20px;
+    min-width: 110px;
+    font-size: 1.5rem;
+    font-weight: $font-bold;
+    border: 1px solid $clr-base;
+    display: inline-block;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+    letter-spacing: 1px;
+    position: relative;
+    color: #333;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 100%;
+        background: #000;
+        transition: all 0.5s ease;
+        z-index: -1;
+    }
+    &:hover {
+        color: #fff;
+        &:before {
+            // z-index: -1;
+            right: 0%;
+        }
+        // &:after {
+        //   z-index: -2;
+        //   right: 100%;
+        // }
+    }
+    &:focus {
+        border: 1px solid $clr-base;
+    }
+    +.bs-btn {
+        margin-left: 15px;
+    }
+    &.btn-default {
+        background: $clr-base;
+        color: $clr-white;
+        &:hover {
+            background: $clr-secondary;
+            border-color: $clr-secondary;
+        }
+    }
+}

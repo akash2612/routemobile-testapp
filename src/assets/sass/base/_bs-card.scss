@@ -1,0 +1,32 @@
+// bs-card
+.bs-card {
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    .img-wrap {
+        width: 35%;
+        img {
+            width: 100%;
+        }
+    }
+    .cont-wrap {
+        width: 65%;
+        padding: 1rem 1.5rem;
+        .mod-label-value {
+            margin-bottom: 1rem;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+            .label {
+                font-weight: $font-bold;
+                display: block;
+                margin-bottom: 0.5rem;
+            }
+            .value {
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+<div class="lyt-login">
+    <div class="container-fluid">
+        <div class="login-wrap">
+            <div class="error-wrap" *ngIf="gs.errorMsg">
+                <p>{{gs.errorMsg}}</p>
+            </div>
+            <form class="bs-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="row">
+                    <div class="col-12 col-sm-12">
+                        <div class="form-group">
+                            <input placeholder="Email" formControlName="email" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12">
+                        <div class="form-group">
+                            <input type="password" formControlName="password" placeholder="Password" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12">
+                        <div class="act-wrap">
+                            <button type="submit" class="btn btn-default">Login</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
